@@ -18,27 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbb-Dp-sdt">
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zbb-Dp-sdt">
                                 <rect key="frame" x="85" y="351" width="244" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LY-Y4-wV8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LY-Y4-wV8">
                                 <rect key="frame" x="109" y="224" width="185" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
                                 <color key="textColor" red="0.99607843137254903" green="0.69019607843137254" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="pyO-CT-Nhh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="pyO-CT-Nhh">
                                 <rect key="frame" x="85" y="674" width="244" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="Oju-hK-uAF"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elu-A8-Jaw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elu-A8-Jaw">
                                 <rect key="frame" x="191" y="453" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="right"/>
                                 <connections>
@@ -48,6 +47,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pyO-CT-Nhh" firstAttribute="trailing" secondItem="zbb-Dp-sdt" secondAttribute="trailing" id="6Vl-6u-iIY"/>
+                            <constraint firstItem="7LY-Y4-wV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="CEo-zQ-c9q"/>
+                            <constraint firstItem="zbb-Dp-sdt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="ENc-58-Ps0"/>
+                            <constraint firstItem="7LY-Y4-wV8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="Kw3-gm-vA3"/>
+                            <constraint firstItem="Elu-A8-Jaw" firstAttribute="centerX" secondItem="zbb-Dp-sdt" secondAttribute="centerX" id="MvV-kA-Qgc"/>
+                            <constraint firstItem="pyO-CT-Nhh" firstAttribute="leading" secondItem="zbb-Dp-sdt" secondAttribute="leading" id="Ncn-MG-uLC"/>
+                            <constraint firstItem="zbb-Dp-sdt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="351" id="NxK-4C-6C1"/>
+                            <constraint firstItem="zbb-Dp-sdt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIb-wm-49u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pyO-CT-Nhh" secondAttribute="bottom" constant="59" id="lew-fq-7ZZ"/>
+                            <constraint firstItem="Elu-A8-Jaw" firstAttribute="top" secondItem="zbb-Dp-sdt" secondAttribute="bottom" constant="72" id="ws4-az-7oO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="dG8-ac-LKt"/>
@@ -93,6 +104,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" image="left"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-Zr-Lwe">
+                                <rect key="frame" x="20" y="304" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.69019607839999997" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Sjg-mH-QXP"/>
@@ -100,6 +118,7 @@
                     <connections>
                         <outlet property="NameLabel" destination="ZBz-HP-YLS" id="0JD-cv-Qml"/>
                         <outlet property="currencyPicker" destination="tg5-8Q-eAF" id="FOk-MI-h63"/>
+                        <outlet property="selectedLabel" destination="jlM-Zr-Lwe" id="DvG-c3-WvW"/>
                         <segue destination="JzW-FT-vbS" kind="show" identifier="goToThird" id="9zk-v9-t1i"/>
                     </connections>
                 </viewController>

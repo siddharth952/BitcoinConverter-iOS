@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
 
     var namePassedOver : String?
@@ -21,15 +21,17 @@ class LaunchViewController: UIViewController {
     //IBOutlets
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
-    
+    @IBOutlet weak var selectedLabel: UILabel!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Name Given!
         NameLabel.text = namePassedOver
         
+        currencyPicker.dataSource = self
+        currencyPicker.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -38,18 +40,32 @@ class LaunchViewController: UIViewController {
         performSegue(withIdentifier: "goToThird", sender: self)
     }
     
+    //Picker View
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencyArray[row]
+    }
 
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencyArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedLabel.text = currencyArray[row]
+    }
+    
     
     
     
     //TODO: Place your 3 UIPickerView delegate methods here
-    
-    
-    
-    
-    
-    
-    
+   
+
     //
     //    //MARK: - Networking
     //    /***************************************************************/
@@ -93,3 +109,18 @@ class LaunchViewController: UIViewController {
     //        updateUIWithWeatherData()
 
 }
+
+
+
+    
+    
+
+    
+    
+  
+    
+    
+    
+
+    
+
