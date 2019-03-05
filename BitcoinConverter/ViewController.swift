@@ -10,27 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    let defaults = UserDefaults.standard
+    
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        
+        defaults.set(nameTextField.text, forKey: "Name_User_Input")
+        
+        
         performSegue(withIdentifier: "goToSecond", sender: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSecond" {
-            
-            let destinationViewController = segue.destination as! LaunchViewController
-            
-            destinationViewController.namePassedOver = "Hello, " + nameTextField.text! + "!"
-        }
-    }
+    
+    // To Pass Data
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToSecond" {
+//
+//            let destinationViewController = segue.destination as! LaunchViewController
+//
+//            destinationViewController.namePassedOver = "Hello, " + nameTextField.text! + "!"
+//        }
+//    }
+    
+    
+    
     
 
 }

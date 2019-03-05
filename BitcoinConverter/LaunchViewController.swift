@@ -10,8 +10,9 @@ import UIKit
 
 class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    let defaults = UserDefaults.standard
 
-    var namePassedOver : String?
+    //var namePassedOver : String?
     
     
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
@@ -28,7 +29,9 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         //Name Given!
-        NameLabel.text = namePassedOver
+        let Input_Name = defaults.string(forKey: "Name_User_Input")
+        //NameLabel.text = namePassedOver
+        NameLabel.text = Input_Name
         
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
@@ -39,6 +42,8 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func nextButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "goToThird", sender: self)
     }
+    
+    
     
     //Picker View
     
