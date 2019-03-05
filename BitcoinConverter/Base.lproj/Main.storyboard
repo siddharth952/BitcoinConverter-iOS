@@ -155,6 +155,9 @@
                         <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Oep-CW-bp6"/>
                     </view>
+                    <connections>
+                        <segue destination="rLy-6B-u3g" kind="show" identifier="goToSelect" id="ks1-9x-hmM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gX-d6-Vof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,4 +169,7 @@
         <image name="left" width="32" height="32"/>
         <image name="right" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ks1-9x-hmM"/>
+    </inferredMetricsTieBreakers>
 </document>
