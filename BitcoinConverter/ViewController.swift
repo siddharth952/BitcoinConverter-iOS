@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
     
@@ -20,13 +22,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if defaults.bool(forKey: "firstRun_Value") == true {
+            performSegue(withIdentifier: "goToSecond", sender: self)
+        }
     }
 
     
     @IBAction func nextButtonPressed(_ sender: Any) {
-        
+        let firstRun = true
         defaults.set(nameTextField.text, forKey: "Name_User_Input")
-        
+        defaults.set(firstRun, forKey: "firstRun_Value")
         
         performSegue(withIdentifier: "goToSecond", sender: self)
     }
