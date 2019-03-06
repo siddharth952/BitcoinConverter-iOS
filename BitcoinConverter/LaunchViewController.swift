@@ -46,7 +46,7 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         // Do any additional setup after loading the view.
     }
     
-    
+    //Next Button Pressed
     @IBAction func nextButtonPressed(_ sender: Any) {
         //Show Loading Screen
         self.showSpinner(onView: self.view)
@@ -62,9 +62,14 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
     }
     
+    //Back Button Pressed
     @IBAction func backButtonPressed(_ sender: Any) {
+        //Save First Run is True Or False
+        let firstRun = false
+        defaults.set(firstRun, forKey: "firstRun_Value")
         self.dismiss(animated: true, completion: nil)
     }
+    
     
         //MARK: - Picker View
     /***************************************************************/
