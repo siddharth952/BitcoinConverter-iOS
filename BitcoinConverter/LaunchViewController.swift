@@ -48,17 +48,23 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     //Picker View
     
     
-    
+    //Determine how many columns we want in our picker.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currencyArray[row]
-    }
 
+
+    //How many rows this picker should have
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return currencyArray.count
+    }
+    
+    //Fill the picker row titles with the Strings from our currencyArray
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        finalURL = baseURL + currencyArray[row]
+        print(finalURL)
+        return currencyArray[row]
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
