@@ -28,6 +28,7 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var selectedLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     
     
@@ -50,7 +51,7 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         //Show Loading Screen
         self.showSpinner(onView: self.view)
     
-         //Testing Condition For GET
+         //Testing Condition For GET (completion handler)
         getBitcoinData(url: finalURL) { (success) -> Void in
             if success {
                 // Do second task if success
@@ -59,15 +60,12 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
         }
         
-       
-        
-
-        
     }
     
     
     
-    //Picker View
+    //MARK: - Picker View
+    /***************************************************************/
     
     
     //Determine how many columns we want in our picker.
@@ -91,13 +89,10 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedLabel.text = currencyArray[row]
     }
-    
-    
-    
-    
-    //TODO: Place your 3 UIPickerView delegate methods here
-   
 
+    
+    
+    
     
         //MARK: - Networking
         /***************************************************************/
@@ -127,9 +122,7 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
  
     
-    
-    
-    //    //MARK: - JSON Parsing
+        //MARK: - JSON Parsing
         /***************************************************************/
     
         func updateBitcoinData(json : JSON) {
@@ -140,15 +133,17 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                 bitcoinDataModel.high = json["high"].doubleValue
                 bitcoinDataModel.low = json["low"].doubleValue
                 bitcoinDataModel.hourly_percent = json["percent"]["hour"].doubleValue
-                //bitcoinDataModel.display_symbol = json["display_symbol"].stringValue
-               print(bitcoinDataModel.hourly)
+                bitcoinDataModel.display_symbol = json["display_symbol"].stringValue
+                bitcoinDataModel.currencyIconName = bitcoinDataModel.updateCurrencyIcon(condition: bitcoinDataModel.display_symbol)
+                
             }else{
+                //Print Out To UI That There Was an Error!
+                errorLabel.text = "You Seem to be Offline!"
                 print("Cannot Fetch Bitcoin Data")
             }
     
-            
-
     }
+    
     
     
     // MARK: - To Pass Data
@@ -163,22 +158,18 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             let destinationViewController = segue.destination as! ConversionViewController
 
             destinationViewController.hourlyDataPassedOver = self.bitcoinDataModel.hourly
+            destinationViewController.currencyIconName = self.bitcoinDataModel.currencyIconName
         }
     }
-    
-    
-    
-
-
-    
-    
-
     
     
 }
 
 
-//Extension For Loading Screen
+
+// MARK: - /Extension For Loading Screen
+/******************************************************************/
+
 var vSpinner : UIView?
 
 extension UIViewController {

@@ -14,13 +14,15 @@ class ConversionViewController: UIViewController {
     //Outlets
     @IBOutlet weak var bitcoinPriceLabel: UILabel!
     
+    @IBOutlet weak var currencyUIView: UIImageView!
     
     
     //Variables
     var hourlyDataPassedOver : Double?
+    var currencyIconName : String?
     
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,16 +40,19 @@ class ConversionViewController: UIViewController {
     }
     
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToSelect", sender: self)
+    }
     
     // MARK: - To Update UI
     /******************************************************************/
     
     func updateUIWithBitcoinData(){
-        
         bitcoinPriceLabel.text = "\(hourlyDataPassedOver ?? 0)"
-        
-        
+        currencyUIView.image = UIImage(named: currencyIconName ?? "None")
     }
+    
+    
  
     
     
