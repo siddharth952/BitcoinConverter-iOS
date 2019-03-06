@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 
 class ViewController: UIViewController {
@@ -23,12 +22,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        if defaults.bool(forKey: "firstRun_Value") == true {
-//            print(defaults.bool(forKey: "firstRun_Value") )
-//            performSegue(withIdentifier: "goToSecond", sender: self)
-//        }
-//    }
+    //Check For User Defaults
+    override func viewDidAppear(_ animated: Bool) {
+        if defaults.bool(forKey: "firstRun_Value") == true {
+            print(defaults.bool(forKey: "firstRun_Value") )
+            performSegue(withIdentifier: "goToSecond", sender: self)
+        }
+    }
 
     
     @IBAction func nextButtonPressed(_ sender: Any) {

@@ -48,7 +48,7 @@ class ConversionViewController: UIViewController {
     /******************************************************************/
     
     func updateUIWithBitcoinData(){
-        bitcoinPriceLabel.text = "\(hourlyDataPassedOver ?? 0)"
+        bitcoinPriceLabel.text = "\(hourlyDataPassedOver ?? 0)" + " " + currencyIconName!
         currencyUIView.image = UIImage(named: currencyIconName ?? "None")
     }
     
