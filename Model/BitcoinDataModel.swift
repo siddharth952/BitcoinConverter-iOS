@@ -21,7 +21,7 @@ class BitcoinDataModel {
     var display_symbol : String = ""
     var currencyIconName : String = ""
  
-    //This method turns a condition code into the name of the weather condition image
+    //This method turns a condition code into the name of the condition image
     
         func updateCurrencyIcon(condition: String) -> String {
     
