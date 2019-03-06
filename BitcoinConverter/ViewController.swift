@@ -15,19 +15,20 @@ class ViewController: UIViewController {
     
     let defaults = UserDefaults.standard
     
-    
+    //Outlets
     @IBOutlet weak var nameTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        if defaults.bool(forKey: "firstRun_Value") == true {
-            performSegue(withIdentifier: "goToSecond", sender: self)
-        }
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        if defaults.bool(forKey: "firstRun_Value") == true {
+//            print(defaults.bool(forKey: "firstRun_Value") )
+//            performSegue(withIdentifier: "goToSecond", sender: self)
+//        }
+//    }
 
     
     @IBAction func nextButtonPressed(_ sender: Any) {
@@ -42,22 +43,11 @@ class ViewController: UIViewController {
     }
     
     
-    // To Pass Data
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToSecond" {
-//
-//            let destinationViewController = segue.destination as! LaunchViewController
-//
-//            destinationViewController.namePassedOver = "Hello, " + nameTextField.text! + "!"
-//        }
-//    }
-    
-    
-    
-    
 
 }
 
+
+//Dismiss Keyboard Wehen Return Tapped
 extension ViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

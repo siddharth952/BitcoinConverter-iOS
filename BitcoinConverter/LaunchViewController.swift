@@ -62,9 +62,11 @@ class LaunchViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
     }
     
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
-    
-    //MARK: - Picker View
+        //MARK: - Picker View
     /***************************************************************/
     
     

@@ -107,14 +107,8 @@
                                     <action selector="nextButtonPressed:" destination="rLy-6B-u3g" eventType="touchUpInside" id="HG6-N6-M4j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3R-HO-Zdk">
-                                <rect key="frame" x="20" y="44" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="left"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlM-Zr-Lwe">
-                                <rect key="frame" x="20" y="304" width="374" height="30"/>
+                                <rect key="frame" x="20" y="465" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
                                 <color key="textColor" red="0.99607843139999996" green="0.69019607839999997" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,6 +121,23 @@
                                 <color key="textColor" red="0.95190981469441616" green="0.24202495362948415" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvZ-TE-FUY">
+                                <rect key="frame" x="40" y="312" width="335" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="44"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.69019607839999997" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwS-en-X2M" userLabel="LeftButton">
+                                <rect key="frame" x="27" y="44" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="left">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="rLy-6B-u3g" eventType="touchUpInside" id="ZpF-vj-0nx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254900000001" green="0.23137254900000001" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Sjg-mH-QXP"/>
@@ -186,7 +197,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Y9-CA-Acx">
-                                <rect key="frame" x="87" y="549" width="240" height="128"/>
+                                <rect key="frame" x="65" y="491" width="285" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -196,7 +207,6 @@
                     <connections>
                         <outlet property="bitcoinPriceLabel" destination="72A-3D-Med" id="1fA-NS-tTg"/>
                         <outlet property="currencyUIView" destination="9Y9-CA-Acx" id="Y5b-rD-GrU"/>
-                        <segue destination="rLy-6B-u3g" kind="show" identifier="goToSelect" id="ks1-9x-hmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gX-d6-Vof" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -209,7 +219,4 @@
         <image name="left" width="32" height="32"/>
         <image name="right" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="zuv-zT-Ecd"/>
-    </inferredMetricsTieBreakers>
 </document>

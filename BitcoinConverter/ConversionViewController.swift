@@ -33,7 +33,7 @@ class ConversionViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { (notification) in
             print("App In Background")
         //Go To Select Currency View Controller
-            self.performSegue(withIdentifier: "goToSelect", sender: self)
+            self.dismiss(animated: true, completion: nil)
             
         }
         
@@ -41,7 +41,7 @@ class ConversionViewController: UIViewController {
     
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "goToSelect", sender: self)
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - To Update UI
