@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 
 class ViewController: UIViewController {
@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         if defaults.bool(forKey: "firstRun_Value") == true {
             performSegue(withIdentifier: "goToSecond", sender: self)
         }
@@ -29,10 +31,13 @@ class ViewController: UIViewController {
 
     
     @IBAction func nextButtonPressed(_ sender: Any) {
+        //User Running For First Time?
         let firstRun = true
+        //Save User Name
         defaults.set(nameTextField.text, forKey: "Name_User_Input")
+        //Save First Run is True Or False
         defaults.set(firstRun, forKey: "firstRun_Value")
-        
+        //Go To Second View
         performSegue(withIdentifier: "goToSecond", sender: self)
     }
     

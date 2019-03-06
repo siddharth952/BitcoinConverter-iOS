@@ -150,8 +150,8 @@
                                 <rect key="frame" x="143" y="772" width="129" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72A-3D-Med">
-                                <rect key="frame" x="132" y="329" width="118" height="56"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72A-3D-Med">
+                                <rect key="frame" x="20" y="329" width="374" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" red="0.99607843137254903" green="0.69019607843137254" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -162,12 +162,13 @@
                         <viewLayoutGuide key="safeArea" id="Oep-CW-bp6"/>
                     </view>
                     <connections>
+                        <outlet property="bitcoinPriceLabel" destination="72A-3D-Med" id="1fA-NS-tTg"/>
                         <segue destination="rLy-6B-u3g" kind="show" identifier="goToSelect" id="ks1-9x-hmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4gX-d6-Vof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017" y="128"/>
+            <point key="canvasLocation" x="3015.9420289855075" y="127.90178571428571"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD2D949C7ECAA97ECC236716 /* Pods_BitcoinConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7787E60908E3C8F98376B101 /* Pods_BitcoinConverter.framework */; };
 		E104FF8B222ED22E000A3A42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104FF8A222ED22E000A3A42 /* AppDelegate.swift */; };
 		E104FF8D222ED22E000A3A42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104FF8C222ED22E000A3A42 /* ViewController.swift */; };
 		E104FF90222ED22E000A3A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E104FF8E222ED22E000A3A42 /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		E104FF95222ED230000A3A42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E104FF93222ED230000A3A42 /* LaunchScreen.storyboard */; };
 		E104FF9D222ED7AB000A3A42 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104FF9C222ED7AB000A3A42 /* LaunchViewController.swift */; };
 		E104FF9F222EF8A0000A3A42 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E104FF9E222EF8A0000A3A42 /* ConversionViewController.swift */; };
+		E1B6B220222F8E6300DDC011 /* BitcoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6B21F222F8E6300DDC011 /* BitcoinDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4171931DE39E398B3B58A23C /* Pods-BitcoinConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinConverter.release.xcconfig"; path = "Target Support Files/Pods-BitcoinConverter/Pods-BitcoinConverter.release.xcconfig"; sourceTree = "<group>"; };
+		4C9378EEF7351F9825017FCE /* Pods-BitcoinConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinConverter.debug.xcconfig"; path = "Target Support Files/Pods-BitcoinConverter/Pods-BitcoinConverter.debug.xcconfig"; sourceTree = "<group>"; };
+		7787E60908E3C8F98376B101 /* Pods_BitcoinConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E104FF87222ED22E000A3A42 /* BitcoinConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E104FF8A222ED22E000A3A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E104FF8C222ED22E000A3A42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		E104FF96222ED230000A3A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E104FF9C222ED7AB000A3A42 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		E104FF9E222EF8A0000A3A42 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		E1B6B21F222F8E6300DDC011 /* BitcoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD2D949C7ECAA97ECC236716 /* Pods_BitcoinConverter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		665EB7537162AF2C2D95ADB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C9378EEF7351F9825017FCE /* Pods-BitcoinConverter.debug.xcconfig */,
+				4171931DE39E398B3B58A23C /* Pods-BitcoinConverter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD38335EBBE57A14CA6FC5A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7787E60908E3C8F98376B101 /* Pods_BitcoinConverter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E104FF7E222ED22E000A3A42 = {
 			isa = PBXGroup;
 			children = (
+				E1B6B21E222F8E3400DDC011 /* Model */,
 				E104FF89222ED22E000A3A42 /* BitcoinConverter */,
 				E104FF88222ED22E000A3A42 /* Products */,
+				665EB7537162AF2C2D95ADB8 /* Pods */,
+				CD38335EBBE57A14CA6FC5A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +97,14 @@
 			path = BitcoinConverter;
 			sourceTree = "<group>";
 		};
+		E1B6B21E222F8E3400DDC011 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E1B6B21F222F8E6300DDC011 /* BitcoinDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E104FF99222ED230000A3A42 /* Build configuration list for PBXNativeTarget "BitcoinConverter" */;
 			buildPhases = (
+				2858804533D4C147CE2690FC /* [CP] Check Pods Manifest.lock */,
 				E104FF83222ED22E000A3A42 /* Sources */,
 				E104FF84222ED22E000A3A42 /* Frameworks */,
 				E104FF85222ED22E000A3A42 /* Resources */,
+				34DDD6C460B24206AE9DC1CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +173,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2858804533D4C147CE2690FC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitcoinConverter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34DDD6C460B24206AE9DC1CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BitcoinConverter/Pods-BitcoinConverter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BitcoinConverter/Pods-BitcoinConverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E104FF83222ED22E000A3A42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +229,7 @@
 			files = (
 				E104FF8D222ED22E000A3A42 /* ViewController.swift in Sources */,
 				E104FF9D222ED7AB000A3A42 /* LaunchViewController.swift in Sources */,
+				E1B6B220222F8E6300DDC011 /* BitcoinDataModel.swift in Sources */,
 				E104FF9F222EF8A0000A3A42 /* ConversionViewController.swift in Sources */,
 				E104FF8B222ED22E000A3A42 /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +375,7 @@
 		};
 		E104FF9A222ED230000A3A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9378EEF7351F9825017FCE /* Pods-BitcoinConverter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,12 +388,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = OutRunHalf.BitcoinConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E104FF9B222ED230000A3A42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4171931DE39E398B3B58A23C /* Pods-BitcoinConverter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -318,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = OutRunHalf.BitcoinConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
