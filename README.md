@@ -1,4 +1,4 @@
-# BitcoinConverter-
+# BitcoinConverter
 
 **Designed for Iphone XR other devices would be supported with future updates.**
 
